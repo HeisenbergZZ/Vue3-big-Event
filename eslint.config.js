@@ -15,6 +15,13 @@ export default defineConfig([
   },
   {
     files: ['**/*.vue'],
+    languageOptions: {
+      globals: {
+        ElMessage: 'readonly',
+        ElMessageBox: 'readonly',
+        ElLoading: 'readonly',
+      },
+    },
     rules: {
       'vue/multi-word-component-names': [
         'warn',
@@ -24,11 +31,6 @@ export default defineConfig([
       ],
       'vue/no-setup-props-destructure': 'off',
       'no-undef': 'error',
-    },
-    globals: {
-      ElMessage: 'readonly',
-      ElMessageBox: 'readonly',
-      ElLoading: 'readonly',
     },
   },
   js.configs.recommended,
