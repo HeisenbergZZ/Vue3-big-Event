@@ -1,16 +1,16 @@
 <script setup>
+import { ElConfigProvider } from 'element-plus'
+import zhCn from 'element-plus/es/locale/lang/zh-cn'
 import { useUserStore } from './stores/index'
 const userStore = useUserStore()
+console.log(userStore)
 </script>
 
 <template>
   <div>
-    我是App
-    <router-view></router-view>
-    <hr />
-    <p>{{ userStore.token }}</p>
-    <el-button @click="userStore.setToken('123456')">登录</el-button>
-    <el-button @click="userStore.removeToken()">退出</el-button>
+    <el-config-provider :locale="zhCn">
+      <router-view></router-view>
+    </el-config-provider>
   </div>
 </template>
 

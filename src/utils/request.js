@@ -9,7 +9,7 @@ import router from '../router'
 const instance = axios.create({
   // 配置基础URL和超时时间
   baseURL,
-  timeout: 5000, // 请求超时时间为5秒
+  timeout: 10000, // 请求超时时间为10秒
 })
 
 // 配置请求拦截器
